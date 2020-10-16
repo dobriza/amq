@@ -1,0 +1,12 @@
+[Service]
+After=drbd-primary.service
+Requires=drbd.service
+
+
+[Unit]
+Description=Mount drbd
+[Mount]
+What=/dev/drbd0
+Where=/amq
+Options=rw
+DirectoryMode=0755
