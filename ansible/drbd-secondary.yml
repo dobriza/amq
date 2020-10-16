@@ -1,5 +1,5 @@
 ---
-- hosts: node-a
+- hosts: dc2
   gather_facts: no
   roles:
   - drbd-secondary

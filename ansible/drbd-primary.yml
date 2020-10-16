@@ -1,5 +1,5 @@
 ---
-- hosts: node-a
+- hosts: dc1
   gather_facts: no
   roles:
   - drbd-primary
