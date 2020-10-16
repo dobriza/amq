@@ -1,5 +1,5 @@
 ---
-- hosts: node-b
+- hosts: node-a
   gather_facts: no
   roles:
   - drbd-secondary

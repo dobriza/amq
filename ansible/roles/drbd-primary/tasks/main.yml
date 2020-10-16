@@ -1,0 +1,25 @@
+---
+  - name: stop drbd-secondary.service 
+    systemd:
+      state: stopped
+      name: drbd-secondary.service
+      enabled: no
+
+  - name: start & enable drbd-primary.service
+    systemd:
+      state: started
+      name: drbd-primary.service
+      enabled: yes
+
+  - name: start & mount amq.mount mount unit
+    systemd:
+      state: started
+      name: amq.mount
+      enabled: yes
+
+  - name: start & enable activemq.service
+    systemd:
+      state: started
+      name: activemq.service
+      enabled: yes
+
