@@ -1,0 +1,15 @@
+[Unit]
+Description=Apache ActiveMQ
+After=amq.automount
+
+[Service]
+Type=forking
+WorkingDirectory=/opt/apache-activemq-5.16.0/bin/
+ExecStart=/opt/apache-activemq-5.16.0/bin/activemq start
+ExecStop=/opt/apache-activemq-5.16.0/bin/activemq stop
+Restart=on-abort
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
