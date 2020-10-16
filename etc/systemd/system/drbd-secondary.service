@@ -1,0 +1,14 @@
+[Unit]
+Description=DRBD Primary
+After=drbd.service
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/etc/drbd.d/drbd-secondary.sh
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
+
